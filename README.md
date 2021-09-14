@@ -1,3 +1,16 @@
+# React_note
+
+![](https://i.imgur.com/dC2oNhS.png)
+
+# About this note...
+1. Import uuid(V4) in order to create unique id
+2. Import json-server to simulate API 
+3. Using hooks(useState, UsuEffect, Useref)
+
+# What this note can do
+1. Add new note
+2. Delete note
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
