@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Item = ({note, date, time, id, deleteData, submitStatus}) => {
+const Item = ({note, type, date, time, id, deleteData, submitStatus}) => {
 
     function deleteItem() {
         submitStatus.current = true
@@ -12,7 +12,7 @@ const Item = ({note, date, time, id, deleteData, submitStatus}) => {
     }
 
     return <div style={divStyle}>
-        <p>{note} {date} {time}</p>
+        <p>{note} - {type} - {date} - {time}</p>
         <button style={btnStyle} onClick={deleteItem}>delete</button>
         </div>
 }

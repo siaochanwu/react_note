@@ -7,8 +7,8 @@ const List = ({ data, deleteData, submitStatus }) => {
     return <div>
     {
         data.map((item) => {
-            const { note, date, time, id} = item;
-            return  <Item note={note} date={date} time={time} key={id} id={id} deleteData={deleteData} submitStatus={submitStatus} />
+            const { note, type, date, time, id} = item;
+            return  <Item note={note} type={type} date={date} time={time} key={id} id={id} deleteData={deleteData} submitStatus={submitStatus} />
         })
     }
     </div>
