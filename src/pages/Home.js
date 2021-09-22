@@ -1,9 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useState, useEffect, useRef } from 'react';
 import { API_GET_DATA } from '../global/constants';
 import Edit from './Edit';
 import List from './List';
-
+import Nav from './partials/Nav';
 
 async function fetchData(setData) {
     const res = await fetch(API_GET_DATA)
@@ -48,21 +49,25 @@ const Home = () => {
     }, []);
 
     return (
-        <div style={divStyle}>
-            <Edit add={setData} submitStatus={submitStatus} />
-            <List data={data} deleteData={setData} submitStatus={submitStatus} />
+        <div> 
+            <Nav />
+            <Container>
+                <Edit add={setData} submitStatus={submitStatus} />
+                <List data={data} deleteData={setData} submitStatus={submitStatus} />
+            </Container>
         </div>
+        
     )
 }
 
-const divStyle = {
-    display: 'flex',
-    width: '30%',
-    flexDirection: 'column',
-    fontSize: '16px',
-    margin: '10px auto',
-    padding: '10px',
-    border: '2px solid red',
-}
+const Container = styled.div`
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    font-size: 16px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px solid red;
+`;
 
 export default Home;
