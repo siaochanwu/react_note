@@ -6,7 +6,7 @@ import Task from './Task';
 import { addTodo } from '../action/todolist';
 
 
-const Third = (props) => {
+const Third = () => {
 
     const names = ['peter', 'sophia', 'winnie']
     
