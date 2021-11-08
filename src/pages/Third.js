@@ -4,6 +4,7 @@ import Nav from './partials/Nav';
 import Hello from './Hello';
 import Task from './Task';
 import { addTodo } from '../action/todolist';
+import Content from './Content';
 
 
 const Third = () => {
@@ -19,6 +20,7 @@ const Third = () => {
             <Nav />
             <h1>Third</h1>
             <Hello names={names} />
+            <Content />
             <div value={todoList}>
                 <span>{`待辦事項數: ${todoList.length}`}</span>
                 <div>
